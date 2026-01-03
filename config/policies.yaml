@@ -1,0 +1,84 @@
+routing:
+  default:
+    preferred:
+      - codex-cli:gpt-5.2-codex
+      - gemini-cli:gemini-3-pro-preview
+      - gemini-cli:gemini-3-flash-preview
+      - github:copilot-gemini-3-pro-preview
+      - github:copilot-claude-opus-4.5
+      - perplexity:sonar-reasoning-pro
+      - github:copilot-gpt-5-mini
+    minCapability: 3
+    qualityThreshold: 0.72
+    maxAttemptsPerCycle: 3
+    pollIntervalMs: 2000
+    maxWaitMs: 60000
+    weights:
+      capability: 1
+      reliability: 0.5
+      cost: 0.5
+      latency: 0.2
+      degradePenalty: 1.5
+      budgetPenalty: 1
+
+  code:
+    preferred:
+      - codex-cli:gpt-5.2-codex
+      - gemini-cli:gemini-3-pro-preview
+      - gemini-cli:gemini-3-flash-preview
+      - github:copilot-gemini-3-pro-preview
+      - github:copilot-claude-opus-4.5
+      - perplexity:sonar-reasoning-pro
+      - github:copilot-gpt-5-mini
+    minCapability: 4
+    qualityThreshold: 0.78
+    maxAttemptsPerCycle: 3
+    pollIntervalMs: 2000
+    maxWaitMs: 60000
+
+  research:
+    preferred:
+      - codex-cli:gpt-5.2-codex
+      - gemini-cli:gemini-3-pro-preview
+      - gemini-cli:gemini-3-flash-preview
+      - github:copilot-gemini-3-pro-preview
+      - github:copilot-claude-opus-4.5
+      - perplexity:sonar-reasoning-pro
+      - github:copilot-gpt-5-mini
+    minCapability: 3
+    qualityThreshold: 0.7
+    maxAttemptsPerCycle: 3
+    pollIntervalMs: 2000
+    maxWaitMs: 60000
+
+budgets:
+  providers:
+    github:
+      softLimitTokens: 500000
+      hardLimitTokens: 600000
+    gemini-cli:
+      softLimitTokens: 500000
+      hardLimitTokens: 600000
+    codex-cli:
+      softLimitTokens: 500000
+      hardLimitTokens: 600000
+    perplexity:
+      softLimitTokens: 500000
+      hardLimitTokens: 600000
+
+streaming:
+  chunkSize: 60
+  chunkDelayMs: 0
+
+codeEvaluation:
+  enabled: false
+  command: bun test
+  timeoutMs: 120000
+  weight: 0.6
+  failurePenalty: 0.2
+  cwd: .
+
+evaluationJudge:
+  enabled: false
+  modelId: codex-cli:gpt-5.2-codex
+  minScore: 0.55

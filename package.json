@@ -1,0 +1,28 @@
+{
+  "name": "switchboard",
+  "module": "index.ts",
+  "type": "module",
+  "author": "Mark Hingston",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mhingston/switchboard.git"
+  },
+  "scripts": {
+    "start": "bun run index.ts",
+    "test": "LOG_SILENT=true bun test"
+  },
+  "dependencies": {
+    "@ai-sdk/perplexity": "^1.0.0",
+    "ai": "^3.0.0",
+    "ai-sdk-provider-codex-cli": "^1.0.0",
+    "ai-sdk-provider-gemini-cli": "^1.0.0",
+    "ai-sdk-provider-github": "^1.0.0",
+    "yaml": "^2.4.0"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}

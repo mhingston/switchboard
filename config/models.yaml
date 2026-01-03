@@ -1,0 +1,91 @@
+models:
+  - id: codex-cli:gpt-5.2-codex
+    provider: codex-cli
+    aiProvider: codex-cli
+    name: gpt-5.2-codex
+    context: 400000
+    capabilities:
+      code: 5
+      reasoning: 5
+      research: 4
+      rewrite: 5
+    costWeight: 1.0
+    enabled: true
+
+  - id: gemini-cli:gemini-3-pro-preview
+    provider: gemini-cli
+    aiProvider: gemini-cli
+    name: gemini-3-pro-preview
+    context: 1048576
+    capabilities:
+      code: 4
+      reasoning: 5
+      research: 5
+      rewrite: 4
+    costWeight: 0.9
+    enabled: true
+
+  - id: gemini-cli:gemini-3-flash-preview
+    provider: gemini-cli
+    aiProvider: gemini-cli
+    name: gemini-3-flash-preview
+    context: 1048576
+    capabilities:
+      code: 3
+      reasoning: 4
+      research: 4
+      rewrite: 4
+    costWeight: 0.6
+    enabled: true
+
+  - id: github:copilot-gemini-3-pro-preview
+    provider: github
+    aiProvider: github
+    name: gemini-3-pro-preview
+    context: 1048576
+    capabilities:
+      code: 4
+      reasoning: 5
+      research: 5
+      rewrite: 4
+    costWeight: 0.95
+    enabled: true
+
+  - id: github:copilot-claude-opus-4.5
+    provider: github
+    aiProvider: github
+    name: claude-opus-4.5
+    context: 200000
+    capabilities:
+      code: 5
+      reasoning: 5
+      research: 5
+      rewrite: 4
+    costWeight: 1.1
+    enabled: true
+
+  - id: perplexity:sonar-reasoning-pro
+    provider: perplexity
+    aiProvider: perplexity
+    name: sonar-reasoning-pro
+    context: 200000
+    capabilities:
+      code: 3
+      reasoning: 5
+      research: 5
+      rewrite: 3
+    costWeight: 1.05
+    enabled: true
+
+  - id: github:copilot-gpt-5-mini
+    provider: github
+    aiProvider: github
+    name: gpt-5-mini
+    context: 400000
+    capabilities:
+      code: 3
+      reasoning: 3
+      research: 3
+      rewrite: 3
+    costWeight: 0.5
+    enabled: true
