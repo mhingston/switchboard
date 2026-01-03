@@ -12,11 +12,11 @@
     "test": "LOG_SILENT=true bun test"
   },
   "dependencies": {
-    "@ai-sdk/perplexity": "^1.0.0",
-    "ai": "^3.0.0",
-    "ai-sdk-provider-codex-cli": "^1.0.0",
-    "ai-sdk-provider-gemini-cli": "^1.0.0",
-    "ai-sdk-provider-github": "^1.0.0",
+    "@ai-sdk/perplexity": "^3.0.2",
+    "ai": "^6.0.6",
+    "ai-sdk-provider-codex-cli": "^1.0.4",
+    "ai-sdk-provider-gemini-cli": "^2.0.1",
+    "ai-sdk-provider-github": "^0.2.1",
     "yaml": "^2.4.0"
   },
   "devDependencies": {
